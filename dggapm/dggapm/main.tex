@@ -180,7 +180,6 @@ Our analysis successfully identified several central nodes critical to the gene 
 % The persistent expression and activity of these transcription factors may profoundly affect cell survival and differentiation, consequently influencing disease initiation and progression. 
 % Thus, elucidating their roles within these pathways deepens our understanding of the molecular mechanisms driving cellular differentiation and offers promising targets for disease treatment and prevention. 
 
-\begin{methods}
 \section*{Methods and materials}
 \subsection*{Inferring gene coexpression networks from scRNA-seq data}
 
@@ -338,7 +337,6 @@ This widely used algorithm in gene coexpression network studies first normalizes
 \subsection*{Evaluation indicators}
 
 We used receiver operating characteristic (ROC) curves, the number of correctly identified edges, and enrichment analysis to compare the performance of different methods. For the same set of genes, we applied different methods to measure the correlations. Based on the estimated correlation values, we generated five ROC curves by calculating the true positive rate and false positive rate for each method, varying the thresholding parameter. The method with the largest area under the ROC curve (AUC) is considered to have the best performance. To quantify the accuracy of the different methods, we ranked the absolute values of the precision matrix calculated by each method in descending order. We then selected a predetermined number of gene pairs with true network edge connections from the top-ranked pairs. Afterward, we calculated the number of true positive edges with strong correlations. Additionally, we performed enrichment analysis using the ``enrichGO" function to compare the performance of the methods. Specifically, we verified whether the original characteristics of the genes were consistent with the enriched pathways.
-\end{methods}
 
 \section*{Discussion and conclusions}
 
@@ -367,7 +365,7 @@ The authors declare that they have no competing interests.\vspace*{-12pt}
 \newpage
 \begin{figure*}[h!]
 	\centering
-	\includegraphics[width=15cm]{./fig/overview.png}
+	\includegraphics[width=\textwidth]{./fig/overview.png}
 	\caption{\textbf{dGGAPM schematic.}
 	dGGAPM is a method to infer gene coexpression networks from single-cell gene expression data. 
 	The framework begins by utilizing a sparse linear regression model to compute regression coefficients and residuals based on the gene expression matrix. 
@@ -381,7 +379,7 @@ The authors declare that they have no competing interests.\vspace*{-12pt}
 
 \begin{figure*}[h!]
 	\centering
-	\includegraphics[width=15cm]{./fig/hESC1.png}
+	\includegraphics[width=\textwidth]{./fig/hESC1.png}
 	\caption{\textbf{Identification of gene coexpression networks from human embryonic stem cells.}
 	\textbf{a}, Correlation heatmap of 100 genes in the hESCs data, where these genes are clustered into five groups.
     \textbf{b}, After performing enrichment analysis on the gene sets from the five categories, the top 6 pathways from each category were selected for merging, and the corrected p-values of the paths were represented as -log10. The larger the value, the more significant the pathway, and the brighter the color in the figure.
@@ -393,7 +391,7 @@ The authors declare that they have no competing interests.\vspace*{-12pt}
 
 \begin{figure*}[h!]
 	\centering
-	\includegraphics[width=15cm]{./fig/hESC2.jpeg}
+	\includegraphics[width=\textwidth]{./fig/hESC2.jpeg}
 	\caption{\textbf{Validation of the algorithm in human embryonic stem cells.}
 	\textbf{a}, ROC curves and AUC values obtained by applying our algorithm, along with scLink, GENIE3, SCODE, and GRNBoost2 algorithms, on 714 cells and 100 genes.
 	\textbf{b}, After comparison with the ground truth in the dataset, the number of correct edges identified by the five algorithms among the top 1000 edges is shown.
@@ -409,7 +407,7 @@ The authors declare that they have no competing interests.\vspace*{-12pt}
 
 \begin{figure*}[htb]
 	\centering
-	\includegraphics[width=13cm]{./fig/mESC1.png}
+	\includegraphics[width=\textwidth]{./fig/mESC1.png}
 	\caption{\textbf{Identification of gene co-expression networks from mouse embryonic stem cells.}
 	\textbf{a}, Correlation heatmap of $100$ genes divided into four groups in the mESCs dataset.
 	\textbf{b}, After enrichment analysis of the four modules, the top $6$ pathways from each module were merged. The corrected pathway p-value is represented as -log$10$. The larger the value, the more significant the pathway, with brighter colors indicating higher significance.
@@ -420,7 +418,7 @@ The authors declare that they have no competing interests.\vspace*{-12pt}
 
 \begin{figure*}[!htb]
 	\centering
-	\includegraphics[width=13cm]{./fig/mESC2.png}
+	\includegraphics[width=\textwidth]{./fig/mESC2.png}
 	\caption{\textbf{Validation of the algorithm in mouse embryonic stem cells.}
 	\textbf{a}, ROC curve and AUC analysis of $421$ cells and $100$ genes using our algorithm alongside scLink, GENIE3, SCODE, and GRNBoost2.
 	\textbf{b}, Comparison with ground truth data from the dataset, showing the number of correctly identified edges among the top $100$ and $200$ predicted edges for each of the five algorithms.
@@ -434,7 +432,7 @@ The authors declare that they have no competing interests.\vspace*{-12pt}
 
 \begin{figure*}[!htb]
 	\centering
-	\includegraphics[width=13cm]{./fig/mHSC1.png}
+	\includegraphics[width=\textwidth]{./fig/mHSC1.png}
 	\caption{\textbf{Identification of gene co-expression networks from mouse hematopoietic stem cells. }
 	\textbf{a}, Correlation heatmap of $100$ genes divided into five groups within the mHSCs dataset.
 	\textbf{b}, Enrichment analysis was performed on the five modules, and the top five pathways from each module were merged. The adjusted pathway p-values are represented as -log$10$.
@@ -446,7 +444,7 @@ The authors declare that they have no competing interests.\vspace*{-12pt}
 
 \begin{figure*}[h!]
 	\centering
-    \includegraphics[width=15cm]{./fig/mHSC2.png}
+    \includegraphics[width=\textwidth]{./fig/mHSC2.png}
 	\caption{\textbf{Validation of the algorithm in mouse hematopoietic stem cells.}
 	We compared our algorithm's performance against four existing algorithms by generating receiver operating characteristic (ROC) curves and calculating the area under the curve (AUC). 
 	\textbf{a} and \textbf{b}, We assessed two gene sets: the top $100$ highly variable genes with a high degree in the true network, and the top $100$ genes ranked by degree.
