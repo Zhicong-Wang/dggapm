@@ -1,30 +1,30 @@
-\documentclass[journal,twoside,web]{ieeecolor}
-\usepackage{generic}
-\usepackage{cite}
-\usepackage{amsmath,amssymb,amsfonts}
-\usepackage{algorithmic}
-\usepackage{graphicx}
-\usepackage{algorithm,algorithmic}
-\usepackage{hyperref}
-\hypersetup{hidelinks=true}
-\usepackage{textcomp}
-\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
-    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
-\markboth{\hskip25pc IEEE TRANSACTIONS AND JOURNALS TEMPLATE}
-{Author \MakeLowercase{\textit{et al.}}: Title}
-\begin{document}
+\documentclass[11pt]{article}
+
+% --------------------------
+% Packages
+% --------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}              % Better font
+\usepackage{geometry}             % Adjust page margins
+\geometry{margin=1in}
+\usepackage{graphicx}             % For images
+\usepackage{caption}              % For custom captions
+\usepackage{subcaption}          % For subfigures
+\usepackage{amsmath, amssymb}     % Math symbols
+\usepackage{booktabs}             % Better tables
+\usepackage{hyperref}             % Clickable references
+\usepackage{enumitem}             % Customizable lists
+\usepackage{xcolor}               % Colors
+\usepackage{float}                % Force figure placement
+\usepackage{authblk}              % For author affiliations
+\usepackage{natbib}
+%% \renewcommand{\includegraphics}[2][]{}
+% --------------------------
+% Title and Authors
+% --------------------------
+%\title{Inferring gene co-expression networks from scRNA-seq data using partial correlation coefficients}
 \title{Efficient Inference of Direct Gene–Gene Associations via High-Dimensional Precision Matrix with Rigorous FDR Control}
-\author{Feifei Ran, Zhicong Wang, Jing Li, Ying Liu, Bin Lian, Jie He, Jialu Hu}
-\thanks{This work has been founded by National Natural Science Foundation of China (Grant No. 62572398, 12501407) and Natural Science Foundation of Jiangsu Province (BK20241363).}
-\thanks{First A. Author is with the National Institute of Standards and 
-Technology, Boulder, CO 80305 USA (e-mail: author@boulder.nist.gov). }
-\thanks{Second B. Author Jr. was with Rice University, Houston, TX 77005 USA. He is 
-now with the Department of Physics, Colorado State University, Fort Collins, 
-CO 80523 USA (e-mail: author@lamar.colostate.edu).}
-\thanks{Third C. Author is with 
-the Electrical Engineering Department, University of Colorado, Boulder, CO 
-80309 USA, on leave from the National Research Institute for Metals, 
-Tsukuba, Japan (e-mail: author@nrim.go.jp).}}
 
 \author[1,$\dagger$]{Feifei Ran}
 \author[2,$\dagger$]{Jing Li}
